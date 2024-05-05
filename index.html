@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chrome App</title>
+    <!-- 구글 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Poetsen+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 구글 아이콘 -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script type="module" defer src="./module/clock.js"></script>
+    <script type="module" defer src="./module/greetings.js"></script>
+    <script type="module" defer src="./module/todolist.js"></script>
+    <script type="module" defer src="./module/background.js"></script>
+    <script type="module" defer src="./module/weatherandLocation.js"></script>
+  </head>
+  <body>
+    <div class="background">
+      <div class="header">
+        <!-- 시계 -->
+        <h2 id="clock"></h2>
+        <!-- 로그인 -->
+        <form id="login-form" class="hidden">
+          <input
+            class="input-style"
+            required
+            maxlength="15"
+            type="text"
+            placeholder="이름을 입력해주세요"
+          />
+          <button type="submit" class="login-btn">로그인</button>
+        </form>
+        <h1 id="greeting" class="hidden"></h1>
+        <div class="main">
+          <!-- 투두 리스트 -->
+          <form id="todo-form">
+            <input
+              class="todo-style"
+              type="text"
+              placeholder="오늘의 할 일을 입력해주세요"
+              required
+            />
+          </form>
+          <ul id="todo-list" class="todo-list"></ul>
+        </div>
+        <!-- 날씨와 위치 -->
+        <div id="weather">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
